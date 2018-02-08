@@ -14,5 +14,7 @@ class MainActivity : AppCompatActivity() {
         val system = ActorSystem.create("MySystem")
         val myActor = system.actorOf(Props.create(UiActor::class.java, this),"myActor")
         myActor.tell("test", ActorRef.noSender())
+//        val configurator = CustomExecutorServiceConfigurator(null, null)
+//        val executorServiceFactory = configurator.createExecutorServiceFactory("id", MainThreadFactory())
     }
 }
