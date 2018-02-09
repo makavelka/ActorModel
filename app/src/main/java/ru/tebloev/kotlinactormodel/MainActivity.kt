@@ -12,11 +12,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val configurator = CustomExecutorServiceConfigurator(null, null)
+        val executorServiceFactory = configurator.createExecutorServiceFactory("id", MainThreadFactory())
+        val executorService = executorServiceFactory.createExecutorService()
         val system = ActorSystem.create("MySystem")
-        val myActor = system.actorOf(Props.create(UiActor::class.java, this).withDispatcher("main-thread-dispatcher"),"actor")
+        val myActor = system.actorOf(Props.create(UiActor::class.java, this),"actor")
         myActor.tell("test", ActorRef.noSender())
-//        val configurator = CustomExecutorServiceConfigurator(null, null)
-//        val executorServiceFactory = configurator.createExecutorServiceFactory("id", MainThreadFactory())
-//        val executorService = executorServiceFactory.createExecutorService()
+
     }
 }
