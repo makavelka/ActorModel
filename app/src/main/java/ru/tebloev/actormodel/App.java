@@ -1,11 +1,11 @@
-package ru.tebloev.kotlinactormodel;
+package ru.tebloev.actormodel;
 
 import android.app.Application;
 
 import akka.actor.ActorSystem;
 
 /**
- * Created by Balodya on 10.02.2018.
+ * @author Tebloev Vladimir
  */
 
 public class App extends Application {
@@ -20,6 +20,10 @@ public class App extends Application {
         mSystem = ActorSystem.create(ACTOR_SYSTEM_NAME);
     }
 
+    /**
+     * Предоставление системы акторов, которая инициализируется вместе с Application
+     * @return система акторов
+     */
     public static ActorSystem provideActorSystem() {
         return mSystem;
     }

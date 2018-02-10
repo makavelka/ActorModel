@@ -1,11 +1,11 @@
-package ru.tebloev.kotlinactormodel;
+package ru.tebloev.actormodel.presentation;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import akka.actor.Actor;
 import akka.actor.ActorRef;
-import akka.actor.Props;
+import ru.tebloev.actormodel.ActorUtils;
+import ru.tebloev.actormodel.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ActorRef myActor = App.provideActorSystem().actorOf(Props.create(UiActor.class, this).withDispatcher("main-thread-dispatcher"), "actor");
+        ActorRef myActor = ActorUtils.getActorRefWithUiDispatcher("MainActor", MainViewActor.class, this);
         myActor.tell("yes, yes, yes", ActorRef.noSender());
     }
 }

@@ -1,4 +1,4 @@
-package ru.tebloev.kotlinactormodel;
+package ru.tebloev.actormodel;
 
 import android.os.Handler;
 import android.os.Looper;
@@ -8,20 +8,13 @@ import com.typesafe.config.Config;
 
 import java.util.List;
 import java.util.concurrent.AbstractExecutorService;
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 import akka.dispatch.DispatcherPrerequisites;
 import akka.dispatch.ExecutorServiceConfigurator;
 import akka.dispatch.ExecutorServiceFactory;
-import akka.dispatch.ThreadPoolConfig;
-import akka.dispatch.ThreadPoolConfigBuilder;
 
 /**
  * @author Tebloev Vladimir
