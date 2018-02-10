@@ -8,7 +8,7 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "ru.tebloev.kotlinactormodel"
-        minSdkVersion 26
+        minSdkVersion 24
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -38,7 +38,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
@@ -46,4 +46,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 //    implementation group: 'com.typesafe.akka', name: 'akka-actor_2.12', version: '2.5.9'
     implementation 'com.typesafe.akka:akka-actor_2.11:2.5.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }

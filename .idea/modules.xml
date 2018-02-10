@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/KotlinActorModel.iml" filepath="$PROJECT_DIR$/KotlinActorModel.iml" />
+      <module fileurl="file://C:\KotlinActorModel\KotlinActorModel.iml" filepath="C:\KotlinActorModel\KotlinActorModel.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\KotlinActorModel\app\app.iml" filepath="C:\KotlinActorModel\app\app.iml" />
     </modules>
   </component>
 </project>
